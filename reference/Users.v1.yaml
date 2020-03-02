@@ -1,0 +1,35 @@
+openapi: 3.0.0
+info:
+  title: Users
+  version: '1.0'
+servers:
+  - url: 'https://stoplight.io/v1/users'
+paths:
+  /users:
+    get:
+      summary: Returns list of the users
+      tags: []
+      responses: {}
+      operationId: get-users
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                id:
+                  type: number
+                age:
+                  type: number
+                phone:
+                  type: string
+              required:
+                - name
+                - id
+                - age
+                - phone
+components:
+  schemas: {}
+  securitySchemes: {}
