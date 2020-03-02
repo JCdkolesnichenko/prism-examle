@@ -3,7 +3,9 @@ info:
   title: Users
   version: '1.0'
 servers:
-  - url: 'https://stoplight.io/v1/users'
+  - url: 'https://stoplight.io/api'
+  - url: ''
+    description: ''
 paths:
   /users:
     get:
