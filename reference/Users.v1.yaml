@@ -8,8 +8,42 @@ paths:
   /users:
     get:
       summary: Returns list of the users
-      tags: []
-      responses: {}
+      tags:
+        - Users
+      responses:
+        '200':
+          description: |-
+            {
+              "name": "test",
+              "id": 1,
+              "age": 1,
+              "phone": "234234234"
+            }
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  id:
+                    type: number
+                  age:
+                    type: number
+                  phone:
+                    type: string
+                required:
+                  - name
+                  - id
+                  - age
+                  - phone
+              examples:
+                example-1:
+                  value:
+                    name: test
+                    id: 1
+                    age: 1
+                    phone: '234234234'
       operationId: get-users
       requestBody:
         content:
@@ -30,6 +64,25 @@ paths:
                 - id
                 - age
                 - phone
+            examples:
+              example-1:
+                value:
+                  name: test
+                  id: 1
+                  age: 1
+                  phone: '234234234'
+          application/xml:
+            schema:
+              type: object
+              properties: {}
+        description: |-
+          {
+            "name": "test",
+            "id": 1,
+            "age": 1,
+            "phone": "234234234"
+          }
+      description: ''
 components:
   schemas: {}
   securitySchemes: {}
