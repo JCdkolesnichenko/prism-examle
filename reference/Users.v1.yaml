@@ -12,13 +12,7 @@ paths:
         - Users
       responses:
         '200':
-          description: |-
-            {
-              "name": "test",
-              "id": 1,
-              "age": 1,
-              "phone": "234234234"
-            }
+          description: OK
           content:
             application/json:
               schema:
@@ -75,13 +69,7 @@ paths:
             schema:
               type: object
               properties: {}
-        description: |-
-          {
-            "name": "test",
-            "id": 1,
-            "age": 1,
-            "phone": "234234234"
-          }
+        description: OK
       description: ''
 components:
   schemas: {}
